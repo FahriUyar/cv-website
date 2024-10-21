@@ -1,0 +1,132 @@
+@import 'swiper/css';
+@import 'swiper/css/zoom';
+
+* {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Banner */
+
+.banner {
+    min-height: 380px;
+    background-image: url(/banner.jpg);
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 
+.banner {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(4, 214, 214);
+    background: linear-gradient(180deg, rgba(9, 131, 231, 0.52) 0%, #b9d3ec 50%, #b9d3ec 50%, rgba(9, 131, 231, 0.52) 100%);
+} */
+
+.banner-image {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+@media (max-width: 767px) {
+    .banner-image {
+        width: 100%;
+        /* Mobil cihazlarda genişliği %100 yapar */
+        height: auto;
+        /* Yükseklik oranını korur */
+        object-fit: contain;
+        /* Oranı koruyarak fotoğrafın tamamını gösterir */
+    }
+}
+
+#projects img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#projects h3 {
+    color: rgb(65, 62, 109);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fas,
+.fab {
+    margin-right: 8px;
+    /* İkon ile metin arasındaki boşluk */
+    color: #4a4a4a;
+    /* İkon rengi */
+}
+
+.navbar-nav.ml-auto {
+    margin-left: auto;
+}
+
+.nav-item .nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item .nav-link .fab {
+    margin-right: 5px;
+}
+
+.swiper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#widget-nexus .swiper-button-prev {
+    padding-left: 16%;
+}
+
+#widget-nexus .swiper-button-next {
+    padding-right: 16%;
+}
+
+.widgetnexuslink a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .swiper {
+        height: auto;
+    }
+
+    .col-md-6, .col-md-12 {
+        margin-top: 20px;
+    }
+
+    .swiper img {
+        height: auto;
+    }
+}
+
+#skills h3 ,  #education h3, #portfolio h3 , #contact h3{
+    color: rgb(38, 98, 189);
+}
