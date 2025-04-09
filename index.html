@@ -2,18 +2,46 @@
 <html lang="en">
 
 <head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W6MW5448GY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-W6MW5448GY');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WKJH7VDK');</script>
+    <!-- End Google Tag Manager -->
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is the personal website of Fahri Uyar.">
-    <title>Fahri Uyar | Personal Info</title>
+    <title>Fahri Uyar | Personal Website</title>
 
 
     <link rel="stylesheet" href="static/style.css">
 
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -28,17 +56,25 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
 
 </head>
 
 <body>
 
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKJH7VDK" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
 
     <!-- Header - Navbar -->
 
-    <header class="fixed-top">
+    <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Web Developer</a>
+            <a class="navbar-brand" href="#" style="font-weight: 700;">Web Developer</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,33 +83,52 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#information">Information</a>
+                        <a class="nav-link" href="#information" style="font-weight: 700;">Information</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                        <a class="nav-link" href="#portfolio" style="font-weight: 700;">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact" style="font-weight: 700;">Contact</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/fahri-uyar-73bb4a243/">
+                        <a class="nav-link" href="https://www.linkedin.com/in/fahri-uyar-73bb4a243/"
+                            style="font-weight: 700;">
                             <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/FahriUyar">
+                        <a class="nav-link" href="https://github.com/FahriUyar" style="font-weight: 700;">
                             <i class="fab fa-github"></i> GitHub
                         </a>
+                    </li>
+                </ul>
+                <ul id="language-selector" class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index-tr.html">Türkçe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">English</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <div class="banner">
-    </div>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col p-0 m-0">
+                    <div class="banner">
+                        <img class="banner-image" src="images/banner.jpg" alt="Responsive Banner">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section>
         <div class="container">
@@ -92,28 +147,29 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <p>Hello! I'm Fahri Uyar, a software developer who recently graduated from the Computer Engineering
-                        department. My interest in the world of technology and software started when I was playing
-                        computer games in my childhood years and this interest was further reinforced with various
-                        projects during my university years.
+                    <p>Hello! I am Fahri Uyar, a software developer who graduated from the Computer Engineering
+                        department in 2024.
+                        During my education, I focused particularly on Front-End technologies and produced various
+                        projects in this field.
                     </p>
                     <p>
-                        During my education process, I gained in-depth knowledge especially in Front-End and Back-End
-                        technologies. By taking part in many team projects, I developed my skills such as teamwork,
-                        problem solving and project management.
+                        In my current job, I have gained extensive experience in web development. I have actively
+                        participated in updating, developing,
+                        and creating websites for our partner hotels. I can confidently say that I am proficient in
+                        website domain and hosting management.
+                        I have also worked on monitoring existing websites using Google Tag Manager and Google
+                        Analytics.
                     </p>
-
-
                     <p>
-                        I have adopted the principle of self-learning and continuous improvement. In this direction, I
-                        follow the latest technologies and continue to learn new languages, tools and methodologies. My
-                        goal is to further develop myself in the field of software engineering and to produce innovative
-                        and effective solutions.
+                        I have adopted the principle of self-learning and continuous improvement. In this regard, I
+                        follow the latest technologies
+                        and continue to learn new languages, tools, and methodologies. My goal is to further develop
+                        myself in the field of software
+                        engineering and produce innovative and effective solutions.
                     </p>
-
                     <p>
                         If you would like to contact me or get more information about my projects, you can reach me via
-                        <span><a href="#contact">contact</a></span>.
+                        the <span><a href="#contact">contact</a></span> section.
                     </p>
                 </div>
             </div>
@@ -121,28 +177,37 @@
     </section>
 
     <!-- Skills -->
-
     <section id="skills">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h3>Skills</h3>
+                <!-- Skills Card -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h3 class="card-title" style="color: rgb(0, 113, 151);">Skills</h3>
                             <ul class="list-unstyled">
-                                <li><i class="fas fa-code"></i>Html, Css, JavaScript, Java, Spring Boot</li>
-                                <li><i class="fas fa-database"></i>PostgreSQL, MsSQL</li>
-                                <li><i class="fas fa-tools"></i>Git, Restful Api</li>
-                                <li><i class="fas fa-comments"></i>Creative, Disciplined, Teamwork, Problem solving</li>
+                                <li><i class="fas fa-code"></i> Html, Css, JavaScript, Bootstrap</li>
+                                <li><i class="fas fa-database"></i> MySQL, MsSQL</li>
+                                <li><i class="fas fa-tools"></i> Git, Restful API</li>
+                                <li><i class="fas fa-server"></i> Hosting and Server Management</li>
+                                <li><i class="fas fa-chart-line"></i> Google Analytics, Tag Manager</li>
+                                <li><i class="fas fa-project-diagram"></i> GitLab, GitHub</li>
+                                <li><i class="fas fa-box"></i> Docker</li>
+                                <li><i class="fas fa-comments"></i> Hardworking, disciplined, problem solver</li>
                             </ul>
                         </div>
-                        <div class="col-md-6">
-                            <h3>Work Experience</h3>
+                    </div>
+                </div>
+                <!-- Work Experience Card -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h3 class="card-title" style="color: rgb(0, 113, 151);">Work Experience</h3>
                             <ul class="list-unstyled">
-                                <li><i class="fas fa-briefcase"></i> Web Developer at ŞaraTour Travel Agency (2023 -
+                                <li><i class="fas fa-briefcase"></i> ŞaraTour Travel Agency | Web Developer (2023 -
                                     Present)</li>
-                                <li><i class="fas fa-briefcase"></i> Intern at Celadon Software (2023)</li>
-                                <li><i class="fas fa-briefcase"></i> Intern at Bulutsoft Software (2022)</li>
+                                <li><i class="fas fa-briefcase"></i> Celadon Software | Intern (2023)</li>
+                                <li><i class="fas fa-briefcase"></i> Bulutsoft Software | Intern (2022)</li>
                             </ul>
                         </div>
                     </div>
@@ -152,21 +217,26 @@
     </section>
 
     <!-- Education -->
-
     <section id="education">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h3>Language</h3>
+                <!-- Language Card -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h3 class="card-title" style="color: rgb(0, 113, 151);">Language</h3>
                             <ul class="list-unstyled">
-                                <li><i class="fas fa-language"></i> English - B2</li>
+                                <li><i class="fas fa-language"></i> English - B1</li>
                                 <li><i class="fas fa-language"></i> Turkish - Native</li>
                             </ul>
                         </div>
-                        <div class="col-md-6">
-                            <h3>Certifications and Courses</h3>
+                    </div>
+                </div>
+                <!-- Certifications and Courses Card -->
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h3 class="card-title" style="color: rgb(0, 113, 151);">Certifications and Courses</h3>
                             <ul class="list-unstyled">
                                 <li><i class="fas fa-certificate"></i> Modern Web Development Course, Udemy</li>
                                 <li><i class="fas fa-certificate"></i> Introduction to Information Technology, BTK
@@ -182,189 +252,264 @@
     </section>
 
 
-    <!-- Portfolio -->
 
+    <!-- Portfolio -->
     <section id="portfolio">
         <div class="container">
-            <h2 class="text-center mt-5">PORTFOLIO</h2>
+            <h2 class="text-center">PORTFOLIO</h2>
             <hr class="mb-4">
-            <div class="row">
-                <div class="col-md-6">
+            <ul class="nav nav-tabs" id="portfolioTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="widget-nexus-tab" data-bs-toggle="tab"
+                        data-bs-target="#widget-nexus" type="button" role="tab" aria-controls="widget-nexus"
+                        aria-selected="true">Widget Nexus</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="jadore-deluxe-hotel-tab" data-bs-toggle="tab"
+                        data-bs-target="#jadore-deluxe-hotel" type="button" role="tab"
+                        aria-controls="jadore-deluxe-hotel" aria-selected="false">Jadore Deluxe Hotel</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="fame-hotel-tab" data-bs-toggle="tab" data-bs-target="#fame-hotel"
+                        type="button" role="tab" aria-controls="fame-hotel" aria-selected="false">Fame Hotel</button>
+                </li>
+            </ul>
 
-                    <!-- Fame Hotel -->
+            <div class="tab-content" id="portfolioTabsContent">
 
-                    <h3>Fame Hotel | Hotel Reservation System</h3>
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container swiper-slide-zoomed">
-                                    <img src="images/fame-hotel/fame-hotel-mainpage.png" alt="Hotel Image">
+                <!-- Widget Nexus Tab -->
+                <div class="tab-pane fade show active" id="widget-nexus" role="tabpanel"
+                    aria-labelledby="widget-nexus-tab">
+                    <h3 class="my-3">Widget Nexus | Center Of Widgets</h3>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="widget-nexus" href="images/widget-nexus/widget-nexus-top.png">
+                                            <img src="images/widget-nexus/widget-nexus-top.png" alt="Widget Nexus Image"
+                                                class="img-thumbnail zoom-img">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="widget-nexus"
+                                            href="images/widget-nexus/widget-nexus-currency.png">
+                                            <img src="images/widget-nexus/widget-nexus-currency.png"
+                                                alt="Currency Widget" class="img-thumbnail zoom-img">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="widget-nexus"
+                                            href="images/widget-nexus/widget-nexus-weather.png">
+                                            <img src="images/widget-nexus/widget-nexus-weather.png" alt="Weather Widget"
+                                                class="img-thumbnail zoom-img">
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container">
-                                    <img src="images/fame-hotel/fame-hotel-accommodation.png" alt="Banner">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container">
-                                    <img src="images/fame-hotel/fame-hotel-contact.png" alt="Technical Image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container">
-                                    <img src="images/fame-hotel/fame-hotel-gallery.png" alt="Hotel Image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container">
-                                    <img src="images/fame-hotel/fame-hotel-reservation.png" alt="Hotel Image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container">
-                                    <img src="images/fame-hotel/fame-hotel-form.png" alt="Hotel Image">
-                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
-
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    <p class="mt-3">Our state-of-the-art hotel reservation system for Fame Hotel simplifies booking
-                        management and
-                        enhances guest experiences. Utilizing Twilio for SMS services, our system ensures seamless
-                        communication with guests, from booking confirmations to special offers. Experience efficient,
-                        reliable, and user-friendly reservation handling with Fame Hotel.
-                    </p>
-                </div>
-                <div class="col-md-6">
-
-                    <!-- Technical Analysis -->
-
-                    <h3>Technical Analysis For Stock Market</h3>
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container swiper-slide-zoomed">
-                                    <img src="images/technical-analysis/tech-anal-top.png" alt="Hotel Image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container">
-                                    <img src="images/technical-analysis/tech-anal-main.png" alt="Banner">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container">
-                                    <img src="images/technical-analysis/tech-anal-wedge.png" alt="Technical Image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container">
-                                    <img src="images/technical-analysis/not-ortalama-hesaplama.png"
-                                        alt="Technical Image">
-                                </div>
+                        <div class="col-lg-6 m-auto">
+                            <p class="info-paragraph">
+                                This project offers practical digital tools for everyday use, combining financial data,
+                                exchange rates, and weather forecasts in a simple, user-friendly interface. It aims to
+                                make essential information and calculations easily accessible.
+                            </p>
+                            <div class="text-center mt-4">
+                                <a href="https://www.widgetnexus.com" target="_blank" class="btn-link">WidgetNexus</a>
                             </div>
                         </div>
-
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
                     </div>
-                    <p class="mt-3">This is my first project, a simple yet informative website designed with HTML and
-                        CSS. It serves
-                        as a useful resource for understanding technical analysis in the stock market. Explore various
-                        indicators, charts, and tools to make informed trading decisions and enhance your market
-                        analysis skills.</p>
                 </div>
-                <div class="col-md-12">
 
-                    <!-- Widget Nexus -->
+                <!-- Jadore Deluxe Hotel Tab -->
+                <div class="tab-pane fade" id="jadore-deluxe-hotel" role="tabpanel"
+                    aria-labelledby="jadore-deluxe-hotel-tab">
+                    <h3 class="my-3">Jadore Deluxe Hotel</h3>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="jadore-deluxe-hotel"
+                                            href="images/jadore-deluxe-hotel/jadore1.png">
+                                            <img src="images/jadore-deluxe-hotel/jadore1.png"
+                                                alt="Side Breeze Main Image" class="img-thumbnail zoom-img">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="jadore-deluxe-hotel"
+                                            href="images/jadore-deluxe-hotel/jadore2.png">
+                                            <img src="images/jadore-deluxe-hotel/jadore2.png" alt="Restaurant Image"
+                                                class="img-thumbnail zoom-img">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="jadore-deluxe-hotel"
+                                            href="images/jadore-deluxe-hotel/jadore3.png">
+                                            <img src="images/jadore-deluxe-hotel/jadore3.png" alt="Restaurant Image"
+                                                class="img-thumbnail zoom-img">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="jadore-deluxe-hotel"
+                                            href="images/jadore-deluxe-hotel/jadore4.png">
+                                            <img src="images/jadore-deluxe-hotel/jadore4.png" alt="Restaurant Image"
+                                                class="img-thumbnail zoom-img">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="jadore-deluxe-hotel"
+                                            href="images/jadore-deluxe-hotel/jadore5.png">
+                                            <img src="images/jadore-deluxe-hotel/jadore5.png" alt="Restaurant Image"
+                                                class="img-thumbnail zoom-img">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="jadore-deluxe-hotel"
+                                            href="images/jadore-deluxe-hotel/jadore6.png">
+                                            <img src="images/jadore-deluxe-hotel/jadore6.png" alt="Restaurant Image"
+                                                class="img-thumbnail zoom-img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
 
-                    <h3 class="text-center mt-2">Widget Nexus | Center Of Widgets</h3>
-                    <div id="widget-nexus" class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container swiper-slide-zoomed">
-                                    <img src="images/widget-nexus/widget-nexus-top.png" alt="Hotel Image">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container">
-                                    <img src="images/widget-nexus/widget-nexus-currency.png" alt="Banner">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="swiper-zoom-container">
-                                    <img src="images/widget-nexus/widget-nexus-weather.png" alt="Technical Image">
-                                </div>
+                        </div>
+                        <div class="col-lg-6 m-auto">
+                            <p class="info-paragraph">
+                                This platform serves as the official website of Jadore Deluxe Hotel, designed to provide
+                                visitors with comprehensive information about the hotel. With its modern design,
+                                user-friendly interface, and high functionality, every detail—from reservations to
+                                general information—is easily accessible.
+                            </p>
+                            <div class="text-center mt-4">
+                                <a href="https://jadorehotel.com/" target="_blank" class="btn-link">Jadore Deluxe
+                                    Hotel</a>
                             </div>
                         </div>
-
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
                     </div>
-                    <p class="mt-3">This site is a project that offers various digital tools and solutions to make
-                        everyday life
-                        easier. It brings together the information that users need in different areas such as financial
-                        data, exchange rates and weather forecasts with a simple and user-friendly interface. This
-                        project aims to provide quick and practical access to technology, making the calculations and
-                        information needed easily available.<br><br>To visit the website:<span class="widgetnexuslink"><a
-                                href="https://www.widgetnexus.com" target="_blank">
-                                WidgetNexus</a></span></p>
                 </div>
-                <!-- Slider main container -->
 
+                <!-- Fame Hotel Tab -->
+                <div class="tab-pane fade" id="fame-hotel" role="tabpanel" aria-labelledby="fame-hotel-tab">
+                    <h3 class="my-3">Fame Hotel | Hotel Reservation System</h3>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="fame-hotel" href="images/fame-hotel/fame-hotel-mainpage.png">
+                                            <img src="images/fame-hotel/fame-hotel-mainpage.png" alt="Hotel Image"
+                                                class="img-thumbnail zoom-img">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="fame-hotel"
+                                            href="images/fame-hotel/fame-hotel-accommodation.png">
+                                            <img src="images/fame-hotel/fame-hotel-accommodation.png" alt="Banner"
+                                                class="img-thumbnail zoom-img">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a data-fancybox="fame-hotel" href="images/fame-hotel/fame-hotel-contact.png">
+                                            <img src="images/fame-hotel/fame-hotel-contact.png" alt="Technical Image"
+                                                class="img-thumbnail zoom-img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 m-auto">
+                            <p class="info-paragraph">
+                                Our advanced reservation system for Fame Hotel streamlines bookings and improves guest
+                                experience. With Twilio-powered SMS services, guests receive instant confirmations and
+                                offers—efficient, reliable, and easy to use.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
     </section>
+
+
 
     <!-- Contact Information -->
 
-    <section id="contact">
-        <h2 class="text-center mt-5">Contact</h2>
+    <section id="contact" class="py-5 bg-light">
         <div class="container">
+            <h2 class="text-center mb-5">Contact</h2>
             <div class="row">
-                <div class="col-12 col-md-6">
-                    <h3>Personal Information</h3>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-user"></i> Fahri Uyar</li>
-                        <li><i class="fas fa-calendar-alt"></i> 26.08.1999</li>
-                        <li><i class="fas fa-phone-alt"></i> 0544 770 0595</li>
-                        <li><i class="fas fa-envelope"></i> fahriuyar32@gmail.com</li>
-                    </ul>
+                <!-- Personal Information -->
+                <div class="col-12 mb-4">
+                    <div class="info-block p-4 rounded shadow-sm">
+                        <h3><i class="fas fa-user-circle me-2 text-primary"></i> Personal Information</h3>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-user me-2"></i> Fahri Uyar</li>
+                            <li><i class="fas fa-calendar-alt me-2"></i> 26.08.1999</li>
+                            <li><i class="fas fa-phone-alt me-2"></i> 0544 770 0595</li>
+                            <li><i class="fas fa-envelope me-2"></i> fahriuyar32@gmail.com</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <h3>Graduation Information</h3>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-university"></i> Antalya Bilim University | Computer Engineering
-                            (2019/2024) | 2.5</li>
-                    </ul>
-                    <h3>Address</h3>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt"></i> Çıplaklı Mahallesi 1860 sokak no:3 Döşemealtı/Antalya
-                        </li>
-                    </ul>
+                <!-- Graduation Information -->
+                <div class="col-12 mb-4">
+                    <div class="info-block p-4 rounded shadow-sm">
+                        <h3><i class="fas fa-graduation-cap me-2 text-success"></i> Graduation Information</h3>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-university me-2"></i> Antalya Bilim University | Computer Engineering
+                                (2019/2024) | 2.5</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-12">
-                    <h3>Social Profiles</h3>
-                    <ul class="list-unstyled">
-                        <li><i class="fab fa-linkedin"></i> <a
-                                href="https://www.linkedin.com/in/fahri-uyar-73bb4a243/">LinkedIn</a></li>
-                        <li><i class="fab fa-github"></i> <a href="https://github.com/FahriUyar">GitHub</a></li>
-                    </ul>
+                <!-- Address -->
+                <div class="col-12 mb-4">
+                    <div class="info-block p-4 rounded shadow-sm">
+                        <h3><i class="fas fa-map-marker-alt me-2 text-danger"></i> Address</h3>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-map-marker-alt me-2"></i> Çıplaklı Mahallesi 1860 sokak no:3
+                                Döşemealtı/Antalya</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Social Profiles -->
+                <div class="col-12 mb-4">
+                    <div class="info-block p-4 rounded shadow-sm">
+                        <h3><i class="fas fa-share-alt me-2 text-info"></i> Social Profiles</h3>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fab fa-linkedin me-2"></i> <a
+                                    href="https://www.linkedin.com/in/fahri-uyar-73bb4a243/">LinkedIn</a></li>
+                            <li><i class="fab fa-github me-2"></i> <a href="https://github.com/FahriUyar">GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer Message -->
+    <section id="thank-you" class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h2 class="display-4 thank-you-message" style="color: white;">Thank You for Visiting!</h2>
+            <p class="lead mt-3">I appreciate your time and hope to see you again.</p>
+        </div>
+    </section>
+
+
 
     <footer class="text-center my-5">
-        <p>&copy; 2024 Fahri Uyar. All rights reserved.</p>
+        <p style="color: black;">&copy; 2025 Fahri Uyar. All rights reserved.</p>
     </footer>
 
 
@@ -377,6 +522,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 
 </body>
 
