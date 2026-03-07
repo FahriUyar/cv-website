@@ -116,6 +116,7 @@ export const content = {
           tags: ["Finans Yönetimi", "SaaS", "Otomasyon"],
           tech: ["React", "Vite", "Tailwind CSS", "Supabase", "Vercel"],
           badge: "Full Stack SaaS",
+          url: "https://www.bilancotakip.com.tr/",
           images: [
             "/images/bilancotakip/bilanco1.png",
             "/images/bilancotakip/bilanco3.png",
