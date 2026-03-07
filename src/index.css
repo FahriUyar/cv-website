@@ -159,6 +159,9 @@ img {
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
@@ -199,7 +202,7 @@ img {
   z-index: -1;
 }
 
-.btn-primary-glow:hover {
+.btn-primary-glow:hover .hero-image-ring {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(0, 212, 255, 0.3);
 }
@@ -589,7 +592,6 @@ img {
   border-radius: 50%;
   padding: 4px;
   background: var(--accent-gradient);
-  animation: ring-rotate 6s linear infinite;
 }
 
 @keyframes ring-rotate {
@@ -1090,54 +1092,55 @@ img {
   cursor: pointer;
 }
 
-.image-modal-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
+/* Swiper Customizations */
+.portfolio-swiper {
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.portfolio-swiper-slide {
+  display: flex !important;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
+}
+
+.portfolio-swiper img {
+  max-height: 85vh;
+  object-fit: contain;
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.portfolio-swiper .swiper-button-next,
+.portfolio-swiper .swiper-button-prev {
+  color: #fff;
+  background: transparent;
+  width: 50px;
+  height: 50px;
   transition: var(--transition);
-  font-size: 1.2rem;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.image-modal-nav:hover {
-  background: rgba(255, 255, 255, 0.2);
+.portfolio-swiper .swiper-button-next:hover,
+.portfolio-swiper .swiper-button-prev:hover {
+  color: var(--accent-cyan);
+  transform: scale(1.15);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 212, 255, 0.8);
 }
 
-.image-modal-prev {
-  left: -60px;
+.portfolio-swiper .swiper-button-next::after,
+.portfolio-swiper .swiper-button-prev::after {
+  font-size: 2rem;
+  font-weight: 800;
 }
 
-.image-modal-next {
-  right: -60px;
-}
-
-.image-modal-dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 16px;
-}
-
-.image-modal-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  border: none;
-  cursor: pointer;
+.portfolio-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 1;
   transition: var(--transition);
 }
 
-.image-modal-dot.active {
+.portfolio-swiper .swiper-pagination-bullet-active {
   background: var(--accent-cyan);
   width: 24px;
   border-radius: 4px;
@@ -1147,10 +1150,10 @@ img {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
-  .image-modal-prev {
+  .portfolio-swiper .swiper-button-prev {
     left: 10px;
   }
-  .image-modal-next {
+  .portfolio-swiper .swiper-button-next {
     right: 10px;
   }
 }

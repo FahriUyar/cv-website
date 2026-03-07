@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Keyboard } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import {
   FaExternalLinkAlt,
-  FaChevronLeft,
-  FaChevronRight,
   FaTimes,
   FaImages,
 } from "react-icons/fa";
@@ -13,16 +16,6 @@ export default function Portfolio({ data }) {
   const openModal = (pi, ii = 0) =>
     setModal({ projectIndex: pi, imageIndex: ii });
   const closeModal = () => setModal(null);
-
-  const navigate = (dir) => {
-    if (!modal) return;
-    const project = data.projects[modal.projectIndex];
-    const total = project.images.length;
-    setModal({
-      ...modal,
-      imageIndex: (modal.imageIndex + dir + total) % total,
-    });
-  };
 
   return (
     <section className="section" id="portfolio">
@@ -90,31 +83,25 @@ export default function Portfolio({ data }) {
             <button className="image-modal-close" onClick={closeModal}>
               <FaTimes />
             </button>
-            <img
-              src={data.projects[modal.projectIndex].images[modal.imageIndex]}
-              alt={data.projects[modal.projectIndex].title}
-            />
-            <button
-              className="image-modal-nav image-modal-prev"
-              onClick={() => navigate(-1)}
+            <Swiper
+              modules={[Navigation, Pagination, Keyboard]}
+              spaceBetween={30}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              keyboard={{ enabled: true }}
+              initialSlide={modal.imageIndex}
+              className="portfolio-swiper"
             >
-              <FaChevronLeft />
-            </button>
-            <button
-              className="image-modal-nav image-modal-next"
-              onClick={() => navigate(1)}
-            >
-              <FaChevronRight />
-            </button>
-            <div className="image-modal-dots">
-              {data.projects[modal.projectIndex].images.map((_, ii) => (
-                <button
-                  key={ii}
-                  className={`image-modal-dot${ii === modal.imageIndex ? " active" : ""}`}
-                  onClick={() => setModal({ ...modal, imageIndex: ii })}
-                />
+              {data.projects[modal.projectIndex].images.map((img, ii) => (
+                <SwiperSlide key={ii} className="portfolio-swiper-slide">
+                  <img
+                    src={img}
+                    alt={`${data.projects[modal.projectIndex].title} - ${ii + 1}`}
+                  />
+                </SwiperSlide>
               ))}
-            </div>
+            </Swiper>
           </div>
         </div>
       )}
