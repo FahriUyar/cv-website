@@ -29,31 +29,36 @@ export const content = {
         {
           title: "Back-End & Database",
           icon: "server",
-          description: "Güçlü ve ölçeklenebilir altyapılar.",
-          items: ["C#", "ASP.NET", "PHP", "Node.js", "MySQL", "Java"],
+          description:
+            "PHP deneyimim ve aktif olarak odaklanıp kendimi geliştirdiğim ASP.NET altyapıları.",
+          items: ["C#", "ASP.NET", "PHP", "Supabase", "MySQL"],
         },
         {
           title: "Front-End",
           icon: "code",
-          description: "Modern ve duyarlı arayüzler.",
+          description:
+            "Temel web standartları ve uzmanlaşmak üzere üzerine düştüğüm React ekosistemi.",
           items: [
             "HTML5 & CSS3",
             "JavaScript (ES6+)",
+            "TypeScript",
             "React",
+            "Next.js",
             "Bootstrap 5",
-            "jQuery",
           ],
         },
         {
           title: "Araçlar & DevOps",
           icon: "tools",
-          description: "Geliştirme süreci ve yönetim araçları.",
+          description:
+            "Yayınlama, versiyon kontrolü ve yapay zeka destekli kodlama süreçleri.",
           items: [
             "Git & GitHub",
+            "Vercel",
             "Docker",
-            "VS Code & Antigravity",
+            "VS Code",
+            "Antigravity (Claude AI)",
             "REST API",
-            "Google Analytics",
           ],
         },
       ],
