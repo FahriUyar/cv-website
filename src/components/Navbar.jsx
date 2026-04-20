@@ -1,77 +1,47 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { socialLinks } from "../data/content";
 
 export default function Navbar({ data }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-
-      // Determine active section
-      const sections = [
-        "about",
-        "skills",
-        "experience",
-        "portfolio",
-        "contact",
-      ];
-      for (const id of sections.reverse()) {
-        const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= 200) {
-          setActiveSection(id);
-          break;
-        }
-      }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollTo = (id) => {
-    setMenuOpen(false);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   const navItems = [
-    { id: "about", label: data.about },
-    { id: "skills", label: data.skills },
-    { id: "experience", label: data.experience },
-    { id: "portfolio", label: data.portfolio },
-    { id: "contact", label: data.contact },
+    { path: "/", label: data.home || "Ana Sayfa" },
+    { path: "/hakkimda", label: data.about },
+    { path: "/yetenekler", label: data.skills },
+    { path: "/deneyim", label: data.experience },
+    { path: "/projeler", label: data.portfolio },
+    { path: "/iletisim", label: data.contact },
   ];
 
   return (
     <nav className={`navbar${scrolled ? " scrolled" : ""}`}>
       <div className="container">
-        <a
-          href="#"
-          className="navbar-brand"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        >
-          fahri<span>uyar</span>.
-        </a>
+        <Link to="/" className="navbar-logo" onClick={() => setMenuOpen(false)}>
+          <img src="/images/logo-fahriuyar.png" alt="Fahri Uyar Logo" />
+        </Link>
 
         <ul className={`nav-links${menuOpen ? " open" : ""}`}>
-          {navItems.map(({ id, label }) => (
-            <li key={id}>
-              <a
-                href={`#${id}`}
-                className={activeSection === id ? "active" : ""}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollTo(id);
-                }}
+          {navItems.map(({ path, label }) => (
+            <li key={path}>
+              <Link
+                to={path}
+                className={location.pathname === path ? "active" : ""}
+                onClick={() => setMenuOpen(false)}
               >
                 {label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

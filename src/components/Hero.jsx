@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { FaArrowRight, FaEnvelope } from "react-icons/fa";
 
 export default function Hero({ data, stats }) {
@@ -63,9 +64,7 @@ export default function Hero({ data, stats }) {
     return () => observer.disconnect();
   }, [stats]);
 
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
+
 
   return (
     <section className="hero" id="about" ref={heroRef}>
@@ -89,22 +88,18 @@ export default function Hero({ data, stats }) {
           </div>
           <p className="hero-description">{data.description}</p>
           <div className="hero-buttons">
-            <button
+            <Link
+              to="/projeler"
               className="btn-primary-glow"
-              onClick={() => scrollTo("portfolio")}
             >
               {data.cta1} <FaArrowRight />
-            </button>
-            <a
+            </Link>
+            <Link
+              to="/iletisim"
               className="btn-outline-glow"
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollTo("contact");
-              }}
             >
               {data.cta2} <FaEnvelope />
-            </a>
+            </Link>
           </div>
           <div className="hero-stats">
             {stats.map((stat, i) => (
@@ -121,10 +116,17 @@ export default function Hero({ data, stats }) {
 
         <div className="hero-image-wrapper">
           <div className="hero-image-ring">
-            <img src="/images/fahri-uyar.jpeg" alt="Fahri Uyar" />
+            <img
+              src="/images/fahri-uyar.webp"
+              alt="Fahri Uyar"
+              fetchpriority="high"
+              loading="eager"
+              width="380"
+              height="380"
+            />
           </div>
-          <div className="hero-floating-badge">💻 React & ASP.NET</div>
-          <div className="hero-floating-badge">🚀 Full Stack Dev</div>
+          <div className="hero-floating-badge">💻 Web Developer</div>
+          <div className="hero-floating-badge">🚀 Modern Technologies</div>
         </div>
       </div>
 

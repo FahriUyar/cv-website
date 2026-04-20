@@ -25,92 +25,105 @@ export default function Contact({ data }) {
   };
 
   return (
-    <section className="section" id="contact">
+    <section className="modern-contact-wrapper" id="contact">
       <div className="container">
-        <div className="section-header">
-          <div className="section-tag">Contact</div>
-          <h2 className="section-title">{data.sectionTitle}</h2>
-          <p className="section-description">{data.sectionDescription}</p>
-          <div className="section-divider" style={{ marginTop: 20 }}></div>
-        </div>
+        <div className="modern-contact-grid">
+          {/* LEFT: Huge Typography & Info */}
+          <div className="modern-contact-left fade-up">
+            <div>
+              <h2 className="contact-huge-title">
+                Birlikte
+                <br />
+                Çalışalım
+              </h2>
+              <p className="contact-subtitle">{data.sectionDescription}</p>
+            </div>
 
-        <div className="contact-grid">
-          <div className="contact-info-cards fade-up">
-            <a
-              href={`mailto:${data.email}`}
-              className="contact-info-card glass-card"
-            >
-              <div className="contact-info-icon">
-                <FaEnvelope />
-              </div>
-              <div>
-                <h4>Email</h4>
-                <span>{data.email}</span>
-              </div>
-            </a>
-            <a
-              href={`tel:+90${data.phone.replace(/\s/g, "")}`}
-              className="contact-info-card glass-card"
-            >
-              <div className="contact-info-icon">
-                <FaPhone />
-              </div>
-              <div>
-                <h4>Telefon</h4>
-                <span>{data.phone}</span>
-              </div>
-            </a>
-            <div className="contact-info-card glass-card">
-              <div className="contact-info-icon">
-                <FaMapMarkerAlt />
-              </div>
-              <div>
-                <h4>Konum</h4>
-                <span>{data.location}</span>
+            <div className="modern-info-list">
+              <a href={`mailto:${data.email}`} className="modern-info-item">
+                <div className="modern-info-icon">
+                  <FaEnvelope />
+                </div>
+                <div className="modern-info-content">
+                  <h4>Email</h4>
+                  <span>{data.email}</span>
+                </div>
+              </a>
+
+              <a
+                href={`tel:+90${data.phone.replace(/\s/g, "")}`}
+                className="modern-info-item"
+              >
+                <div className="modern-info-icon">
+                  <FaPhone />
+                </div>
+                <div className="modern-info-content">
+                  <h4>Telefon</h4>
+                  <span>{data.phone}</span>
+                </div>
+              </a>
+
+              <div className="modern-info-item">
+                <div className="modern-info-icon">
+                  <FaMapMarkerAlt />
+                </div>
+                <div className="modern-info-content">
+                  <h4>Konum</h4>
+                  <span>{data.location}</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <form
-            className="contact-form glass-card fade-up stagger-2"
-            onSubmit={handleSubmit}
+          {/* RIGHT: Minimalist Form */}
+          <div
+            className="modern-contact-right fade-up"
+            style={{ transitionDelay: "200ms" }}
           >
-            <div className="form-group">
-              <label>{data.formName}</label>
-              <input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                placeholder="Adınızı girin..."
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>{data.formEmail}</label>
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder="Email adresinizi girin..."
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>{data.formMessage}</label>
-              <textarea
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                placeholder="Mesajınızı yazın..."
-                required
-              ></textarea>
-            </div>
-            <button type="submit" className="form-submit">
-              {data.formSubmit} <FaPaperPlane />
-            </button>
-          </form>
+            <form onSubmit={handleSubmit}>
+              <div className="minimal-form-group">
+                <input
+                  type="text"
+                  name="name"
+                  className="minimal-input"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder=" "
+                  required
+                />
+                <label className="minimal-label">{data.formName}</label>
+              </div>
+
+              <div className="minimal-form-group">
+                <input
+                  type="email"
+                  name="email"
+                  className="minimal-input"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder=" "
+                  required
+                />
+                <label className="minimal-label">{data.formEmail}</label>
+              </div>
+
+              <div className="minimal-form-group">
+                <textarea
+                  name="message"
+                  className="minimal-textarea"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder=" "
+                  required
+                ></textarea>
+                <label className="minimal-label">{data.formMessage}</label>
+              </div>
+
+              <button type="submit" className="btn-send">
+                {data.formSubmit} <FaPaperPlane />
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
