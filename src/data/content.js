@@ -185,40 +185,134 @@ export const content = {
       visitBtn: "Projeyi İncele",
       projects: [
         {
+          id: "cumba-sigorta",
+          title: "Cumba Sigorta",
+          summary:
+            "React ve Vite kullanılarak geliştirilmiş, modern, hızlı ve şık bir kurumsal sigorta tanıtım platformu.",
+          description:
+            "Cumba Sigorta için özel olarak tasarlanan bu kurumsal web sitesi, markanın profesyonel kimliğini dijital dünyaya taşımayı hedefler. React ve Vite teknolojileri kullanılarak modern web standartlarında inşa edilmiş olup, kullanıcı deneyimini ön planda tutan şık ve akıcı bir arayüze sahiptir. Ziyaretçilerin sigorta hizmetleri hakkında net bilgiler alabileceği ve firmayla anında iletişime geçebileceği, güven veren bir yapı sunar.",
+          challenge:
+            "Geleneksel sigortacılık sektöründeki hantal ve karmaşık sitelerin aksine; ziyaretçilere güven veren, modern tasarım trendlerine uygun ve saniyeler içinde yüklenen bir dijital vitrin oluşturmak.",
+          solution:
+            "Yüksek performans ve anlık sayfa geçişleri sağlamak amacıyla geliştirme altyapısı olarak React ve Vite tercih edildi. Markanın vizyonunu yansıtan modern UI/UX prensipleriyle, estetik ve mobil uyumlu bir kurumsal web sitesi hayata geçirildi.",
+          features: [
+            {
+              title: "Modern ve Şık Arayüz",
+              icon: "layout",
+              description:
+                "Kullanıcı deneyimini (UX) merkeze alan, markanın kurumsal kimliğine yakışır estetik ve profesyonel tasarım.",
+            },
+            {
+              title: "Yıldırım Hızında Performans",
+              icon: "zap",
+              description:
+                "Vite'ın sunduğu modern derleme altyapısı ve React ile sıfır gecikmeli, anında yüklenen sayfalar.",
+            },
+            {
+              title: "Mobil Öncelikli (Responsive)",
+              icon: "smartphone",
+              description:
+                "Telefonlardan tablet ve masaüstüne kadar tüm ekran boyutlarında kusursuz çalışan esnek yapı.",
+            },
+          ],
+          tags: ["React", "Vite", "Kurumsal Site"],
+          tech: ["React", "Vite", "JavaScript", "CSS"],
+          url: "https://demo.fahriuyar.com.tr/",
+          images: [
+            "/images/cumba-sigorta/1.png",
+            "/images/cumba-sigorta/2.png",
+            "/images/cumba-sigorta/3.png",
+            "/images/cumba-sigorta/4.png",
+            "/images/cumba-sigorta/5.png",
+          ],
+        },
+
+        {
+          id: "calido-sol-hotel",
+          title: "Calido Sol Hotel",
+          summary:
+            "3 farklı dil seçeneğine sahip, sade ve modern tasarımıyla öne çıkan resmi otel tanıtım platformu.",
+          description:
+            "Calido Sol Hotel için tasarlanan bu resmi web sitesi, otelin sunduğu konaklama ayrıcalıklarını şık ve kurumsal bir dille dijital ortama taşır. Saf PHP, JavaScript ve Bootstrap teknolojileri kullanılarak geliştirilmiş olup, ziyaretçilere güven veren estetik bir arayüz sunar. Uluslararası misafir kitlesine hitap etmek amacıyla 3 farklı dil desteği entegre edilmiştir.",
+          challenge:
+            "Farklı ülkelerden gelen misafirlerin oteli detaylı inceleyebilecekleri, karmaşadan uzak ve marka değerini yansıtan çok dilli resmi bir dijital kimlik oluşturmak.",
+          solution:
+            "Misafirlerin ihtiyaçlarına odaklanan, modern ve kullanıcı dostu bir arayüz geliştirildi. Turizm sektöründeki uluslararası görünürlük için çoklu dil sistemi kuruldu ve temel SEO çalışmalarıyla desteklendi.",
+          features: [
+            {
+              title: "Gelişmiş Çoklu Dil Sistemi",
+              icon: "globe",
+              description:
+                "Yurtdışından gelen potansiyel misafirler için özel olarak kurgulanmış, sorunsuz çalışan 3 farklı dil seçeneği.",
+            },
+            {
+              title: "Sade, Şık ve Modern Tasarım",
+              icon: "layout",
+              description:
+                "Kullanıcıyı yormayan, otelin oda ve hizmetlerini görsel olarak en iyi şekilde ön plana çıkaran estetik arayüz.",
+            },
+            {
+              title: "Arama Motoru Uyumluluğu",
+              icon: "search",
+              description:
+                "Otelin Google'da doğru kitleye ulaşabilmesi için yapılandırılmış, temel SEO kurallarına sadık kalınan altyapı.",
+            },
+          ],
+          tags: ["Otel Sitesi", "Çoklu Dil", "PHP"],
+          tech: ["PHP", "JavaScript", "Bootstrap", "CSS"],
+          url: "https://calidohotels.com/calidosol/",
+          images: [
+            "/images/calido-sol/1.png",
+            "/images/calido-sol/2.png",
+            "/images/calido-sol/3.png",
+            "/images/calido-sol/4.png",
+            "/images/calido-sol/5.png",
+            "/images/calido-sol/6.png",
+          ],
+        },
+
+        {
           id: "psikolog-cagla-arikan",
           title: "Psikolog Çağla Arıkan",
           summary:
-            "Klinik uzmanlığı dijital güvenle buluşturan, SEO odaklı profesyonel tanıtım platformu.",
+            "Dinamik yönetim paneline sahip, gelişmiş SEO altyapısıyla öne çıkan profesyonel klinik psikolog platformu.",
           description:
-            "Klinik psikolog Çağla Arıkan için tasarlanan bu site, danışanların uzmanlık alanları ve iletişim bilgilerine kolayca ulaşabilmesini hedefleyen profesyonel bir tanıtım platformudur. Tamamen front-end odaklı, PHP tabanlı yapısıyla hızlı yüklenen, SEO uyumlu ve mobil cihazlara tam entegre bir deneyim sunar. İletişim formu aracılığıyla potansiyel danışanların doğrudan randevu talebi iletebilmesini sağlayan modern ve güven veren bir arayüze sahiptir.",
+            "Klinik psikolog Çağla Arıkan için geliştirilen bu platform, Laravel 11 ve Filament PHP altyapısı kullanılarak inşa edilmiştir. Sitenin tüm içeriklerinin, meta etiketlerinin ve site ayarlarının teknik bilgiye ihtiyaç duyulmadan yönetilebilmesini sağlayan özel bir admin paneline sahiptir. Schema.org (JSON-LD) entegrasyonu, Open Graph destekli dinamik meta etiketleri ve kopya içerik engelleyici sistemlerle arama motorlarında maksimum performans sunacak şekilde tasarlanmıştır.",
           challenge:
-            "Psikoloji alanında dijital görünürlük oluşturmak, potansiyel danışanların güvenini kazanacak profesyonel bir çevrimiçi varlık inşa etmek ve yüksek rekabetli yerel aramalarda öne çıkmak.",
+            "Psikoloji alanındaki yerel aramalarda (SEO) öne çıkmak ve site sahibinin içeriklerini/hizmetlerini bir yazılımcıya ihtiyaç duymadan kolayca güncelleyebileceği bir altyapı oluşturmak.",
           solution:
-            "Semantik HTML5 yapısı, optimize edilmiş varlık yönetimi ve teknik SEO standartlarına tam uyum ile Google PageSpeed puanları maksimize edildi. Sade ve güven veren bir tasarım dili ile kullanıcıyı doğrudan iletişime yönlendiren bir deneyim oluşturuldu.",
+            "Modern Laravel mimarisi üzerine Filament PHP ile güçlü ve kullanıcı dostu bir yönetim paneli entegre edildi. Google arama sonuçlarında resimli ve detaylı çıkabilmesi için (Rich Snippets) JSON-LD yapılandırılmış verileri kodlandı. Yüksek performans için optimize edilmiş Blade şablonları kullanıldı.",
           features: [
             {
-              title: "Yüksek SEO Performansı",
-              icon: "zap",
+              title: "Dinamik Yönetim Paneli",
+              icon: "settings",
               description:
-                "Teknik SEO standartlarına tam uyumlu kod mimarisi ile arama motorlarında üst sıralarda yer alma.",
+                "Filament PHP ile kodlanmış, site yazılarının, görsellerin ve SEO ayarlarının anlık olarak değiştirilebildiği admin paneli.",
             },
             {
-              title: "İletişim Formu",
-              icon: "form",
+              title: "Gelişmiş Teknik SEO",
+              icon: "search",
               description:
-                "Danışanların kolayca randevu talebi iletebileceği güvenli ve kullanıcı dostu iletişim formu.",
+                "JSON-LD Schema entegrasyonu, dinamik Open Graph kartları ve 301 yönlendirmeleri ile tam uyumlu arama motoru optimizasyonu.",
             },
             {
-              title: "Mobil Uyumlu Tasarım",
-              icon: "mobile",
+              title: "Mobil Uyumlu & Hızlı",
+              icon: "smartphone",
               description:
-                "Her ekran boyutunda kusursuz görüntülenen, mobil öncelikli responsive tasarım.",
+                "Bootstrap 5 kullanılarak geliştirilmiş, her cihazda kusursuz çalışan ve hızlı yüklenen mobil öncelikli responsive yapı.",
             },
           ],
-          tags: ["SEO Odaklı", "Modern Tasarım", "Lokal SEO"],
-          tech: ["PHP", "Bootstrap", "JavaScript"],
+          tags: ["Laravel 11", "Filament", "Gelişmiş SEO"],
+          tech: ["Laravel", "Filament PHP", "Bootstrap", "JavaScript"],
           url: "https://pskcaglaarikan.com.tr",
-          images: ["/images/pskcaglaarikan/cagla.png"],
+          images: [
+            "/images/pskcaglaarikan/1.png",
+            "/images/pskcaglaarikan/2.png",
+            "/images/pskcaglaarikan/3.png",
+            "/images/pskcaglaarikan/4.png",
+            "/images/pskcaglaarikan/5.png",
+            "/images/pskcaglaarikan/6.png",
+          ],
         },
         {
           id: "bilanco-takip-sistemi",
