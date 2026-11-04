@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { content } from "./data/content";
+import { Analytics } from "@vercel/analytics/react";
 
 // Pages
 import Home from "./pages/Home";
@@ -34,11 +40,11 @@ function RouteObserver() {
             if (entry.isIntersecting) {
               entry.target.classList.add("visible");
               // İsteğe bağlı: Ekranda göründükten sonra izlemeyi bırak
-              // observer.unobserve(entry.target); 
+              // observer.unobserve(entry.target);
             }
           });
         },
-        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+        { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
       );
 
       // Daha önce eklenmiş visible sınıflarını temizleyebiliriz veya direkt observe edebiliriz
@@ -63,18 +69,25 @@ function App() {
         <ScrollToTop />
         <RouteObserver />
         <Navbar data={data.nav} />
-        
+
         <Routes>
           <Route path="/" element={<Home data={data} />} />
           <Route path="/hakkimda" element={<About data={data} />} />
           <Route path="/yetenekler" element={<Skills data={data.skills} />} />
-          <Route path="/deneyim" element={<Experience data={data.experience} />} />
-          <Route path="/projeler" element={<Portfolio data={data.portfolio} />} />
+          <Route
+            path="/deneyim"
+            element={<Experience data={data.experience} />}
+          />
+          <Route
+            path="/projeler"
+            element={<Portfolio data={data.portfolio} />}
+          />
           <Route path="/projeler/:id" element={<ProjectDetail />} />
           <Route path="/iletisim" element={<Contact data={data.contact} />} />
         </Routes>
-        
+
         <Footer data={data.footer} />
+        <Analytics />
       </Router>
     </HelmetProvider>
   );
