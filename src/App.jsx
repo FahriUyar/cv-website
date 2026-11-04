@@ -10,7 +10,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { content } from "./data/content";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react";
 // Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -88,7 +87,6 @@ function App() {
 
         <Footer data={data.footer} />
         <Analytics />
-        <SpeedInsights />
       </Router>
     </HelmetProvider>
   );
